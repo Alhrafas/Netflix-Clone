@@ -5,8 +5,19 @@
     </div>
 
     <div>
+      
+      {% if request.user.is_authenticated %}
+        <form action="{% url 'account_logout' %}" method="post">
+            {% csrf_token %}
+            <button class='bg-primary_red py-1 px-3 text-white md:text-lg rounded-md'>
+                Logout 
+            </button>
+        </form>
+        {% else %}
         <button class='bg-primary_red py-1 px-3 text-white md:text-lg rounded-md'>
             Sign In 
         </button>
+      {% endif %}
+        
     </div>
 </nav>
