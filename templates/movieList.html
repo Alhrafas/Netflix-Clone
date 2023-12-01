@@ -1,18 +1,15 @@
 {% extends 'base.html' %}
-
-{% block tittle %}
-    movie list    
-{% endblock tittle %}
+{% load static %}
+{% block title %}
+    Enjoy Netflix 
+{% endblock title %}
 {% block others %}
 <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
-{% endblock %}
-    
-
+{% endblock %}   
 {% block content %}
-
 {% include 'partials/navbar.html' %}
 <main class='bg-primary_black min-h-screen w-full'>
-    <section class="h-screen relative bg-no-repeat pb-8 pl-6 flex justify-end items-end bg-cover" style="background-image: url('assets/movie.webp');">
+    <section class="h-screen relative bg-no-repeat pb-8 pl-6 flex justify-end items-end bg-cover" style="background-image: url('{% static 'movie.webp' %}');">
         <div>
             <h2 class="text-6xl font-semibold text-white my-4">
                 Vikings
@@ -45,35 +42,18 @@
                 Popular on Netflix
             </h2>
             <div class="flex justify-center  items-center min-w-full  movie_lis">
-                <div class=" h-40 m-4  bg-blue-500 flex-shrink-0 rounded-md cursor-pointer w-40">
-                    
-                </div>
-
-                <div class="flex-shrink-0  h-40 m-4  bg-blue-500 rounded-md cursor-pointer w-40" >
+                
+                {% for movie in movies %}
+                    <a href="#">
+                        <div class="flex-shrink-0  h-40 m-4  bg-blue-500 rounded-md cursor-pointer overflow-hidden w-40" >
+                            <img src="{{ movie.flyer.url }}" class="w-full h-full " alt="">
+                        </div>
+                    </a>
+                {% endfor %}
     
-                </div>
-
-                <div class="flex-shrink-0  h-40 m-4  bg-blue-500 rounded-md cursor-pointer w-40" >
-    
-                </div>
-
-                <div class="flex-shrink-0  h-40 m-4  bg-blue-500 rounded-md cursor-pointer w-40" >
-    
-                </div>
-
-                <div class="flex-shrink-0  h-40 m-4  bg-blue-500 rounded-md cursor-pointer overflow-hidden w-40" >
-                    <img src="assets/movie.webp" class="w-full h-full " alt="">
-                </div>
-
-                <div class="flex-shrink-0  h-40 m-4  bg-blue-500 rounded-md cursor-pointer w-40" >
-    
-                </div>
-
-            
             </div>
         </div>
-    </section>
-    
+    </section>  
 </main>    
 {% endblock content %}
     
