@@ -1,27 +1,30 @@
-# asgiref==3.6.0
-# astroid==2.14.1
-# certifi==2022.12.7
-# cffi==1.16.0
-# charset-normalizer==3.3.2
-# colorama==0.4.6
-# contourpy==1.0.6
-# crispy-bootstrap4==2022.1
-# cryptography==41.0.7
-# cycler==0.11.0
-# defusedxml==0.7.1
-# dill==0.3.6
-# distlib==0.3.6
+asgiref==3.6.0
+astroid==2.14.1
+certifi==2022.12.7
+cffi==1.16.0
+charset-normalizer==3.3.2
+colorama==0.4.6
+contourpy==1.0.6
+crispy-bootstrap4==2022.1
+cryptography==41.0.7
+cycler==0.11.0
+defusedxml==0.7.1
+dill==0.3.6
+distlib==0.3.6
 Django==4.2.2
 django-allauth==0.58.2
 django-crispy-forms==2.0
 djangorestframework==3.14.0
 filelock==3.12.2
 fonttools==4.38.0
+gunicorn==21.2.0
 idna==3.6
 isort==5.12.0
 kiwisolver==1.4.4
 lazy-object-proxy==1.9.0
-
+matplotlib==3.6.2
+mccabe==0.7.0
+numpy==1.24.0
 oauthlib==3.2.2
 packaging==22.0
 Pillow==9.3.0
