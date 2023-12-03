@@ -1,0 +1,1 @@
+web: gunicorn django_netflix.wsgi:application --bind 0.0.0.0:$PORT 
